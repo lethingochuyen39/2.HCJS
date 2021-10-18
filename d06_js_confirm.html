@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm</title>
+</head>
+<body>
+    <h2>Confirm() Demo </h2>
+    <hr>
+    <input type="button" value="Close your window?" 
+    id="btnClose">
+<script>
+    document.getElementById("btnClose").onclick=function(){
+        //hien hop thoai user muon tat cua so trinh duyet hay khong
+      var r=  confirm("Close your window? are u sure?");
+      if(r==true){
+          //neu click vo nut ok:tat cua so trinh duyet dang mo
+          window.close();
+      }
+    }
+</script>
+</body>
+</html>
