@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expression</title>
+</head>
+<body>
+    <h2>Regular expression Demo</h2>
+    <hr>
+    <form action="" method="get">
+        <div> <label for="">Input PassCode:</label>
+            <input type="text" name="passcode" id="passcode">
+        </div>
+        <div>
+            <input type="button" value="check" id="check">
+        </div>
+
+    </form>
+    <script>
+        document.getElementById("check").onclick=function(){
+            //doc du lieu nhap passcode
+            var pc= document.getElementById("passcode").value;
+            // kiem tra pc co hop le hay khong
+            // 1 pc hop le la chuoi bat dau bang 2 chu "pc" và theo sau la nam so bat ky
+            var re= /^PC\d{5}$ /;//bt qui tac mo ta luat kiem tra
+
+            //ktra chuoi nhap voi bieu thuc qui tac 
+            if(re.test(pc)){
+                alert("chuc mung ban da nhap pass-code thanh cong");
+            }else{
+                alert(`${pc} la passcode ko hop le!!!`);
+
+
+            }
+        }
+    </script>
+</body>
+</html>
