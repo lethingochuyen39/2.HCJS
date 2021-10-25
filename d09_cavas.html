@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        canvas{
+            background-color: lightcyan;
+            border:mediumblue solid medium;
+        }
+        img{
+            width: 300px;
+            height: 150px;
+        }
+        img:hover{
+            box-shadow: 3px 3px 3px peru;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Canvas Demo</h2>
+    <hr>
+    <input type="button" value="draw Line" id="btnLine" onclick="drawLine();">
+
+    <input type="button" value="draw Rectangle" id="btnRect" onclick="drawRect();">
+
+    <input type="button" value="draw Circle" id="btnCircle" onclick="drawCircle();">
+
+    <input type="button" value="draw Text" id="btnText" onclick="drawText();">
+
+    <br><br>
+    <canvas width="600" height="400" id="bv"></canvas>
+    <div>
+        <img src="images/christ2b.png" alt="" id="h1" onmouseenter="drawImage(1)">
+        <img src="images/christ3b.png" alt="" id="h2" onmouseenter="drawImage(2)">
+        <img src="images/christ4b.png" alt="" id="h3" onmouseenter="drawImage(3)">
+    </div>
+</body>
+
+<script src="js/d09_cavas.js">
+</script>
+
+</html>
