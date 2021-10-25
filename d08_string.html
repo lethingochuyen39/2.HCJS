@@ -28,7 +28,7 @@
 
     <div>
         <label for="">Input your text</label>
-        <input type="text" name="s1" id="s1" value="    La   Bao Minh     ">
+        <input type="text" name="s1" id="s1" value="    La   Bao Minh    ">
     </div>
 
     <div>
@@ -61,7 +61,9 @@
 
             var p = s3.lastIndexOf(' ');
             var s7 = s3.substr(p);
-
+            var r4= s1.charAt(13);
+            var s8 =s1.substr(13);
+           
 
             var a=[];
             a.push(`s1 = "${s1}" `);
@@ -76,6 +78,9 @@
             a.push(`s1.replace("a","i") = "${s5}"`);
             a.push(`s1.replaceAll("a","i") = "${s6}"`);
             a.push(`your name = "${s7}"`);
+
+            a.push(`s1.charat 13 is:" ${r4}"`);
+            a.push(`your name: "${s8}"`)
 
             document.getElementById("result").value = a.join("\n");
 
