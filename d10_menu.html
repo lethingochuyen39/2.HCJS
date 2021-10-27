@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        table.menu{
+            background-color: rgb(243, 239, 235);
+        }
+        .menu td{
+            padding: 0.3rem 0.6rem;
+            border-right: rgb(107, 97, 94) thin solid;
+
+        }
+        .menu a{
+            text-decoration: none;
+
+        }
+        p{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/baby-cute.jpg" alt="" width="50%">
+    <div>
+        <p id="profile"></p>
+        <h2>My Gallery</h2>
+        <p>our picture since 2008</p>
+        <hr>
+        <table class="menu">
+            <tr>
+                <td><a href="d05_menu.html">Home</a></td>
+                <td><a href="">Contact us</a></td>
+                <td><a href="">About us</a></td>
+                <td><a href="">FAQs</a></td>
+                <td><a href=""></a></td>
+            </tr>
+        </table>
+    </div>
+    
+    <script>
+        window.onload=function(){
+
+            let uid = sessionStorage.getItem("uid");
+            let pwd = sessionStorage.getItem("pwd");
+             if(uid != null && pwd != null){
+
+             }
+            document.getElementById("profile").innerHTML= `welcome mr./ms ${uid}! <br> your pass is ${pwd}.`;
+
+        }
+    </script>
+</body>
+</html>
