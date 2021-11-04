@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax-load</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Jquery - Ajax Demo</h2>
+        <hr>
+        <button class="btn btn-danger">Load Product</button>
+        <div id="sp"></div>
+    </div>
+    
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $("button").on("click",function(){
+        $("#sp").load("d12_product.html")
+        
+    });
+</script>
+</html>
