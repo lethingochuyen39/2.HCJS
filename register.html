@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        label {
+            display: inline-block;
+            margin-top: 0.5rem;
+            width: 9rem;
+            margin-left: 1rem;
+            margin-bottom: .5rem;
+            text-align: right;
+
+        }
+        td:first-child{
+            padding-right: 1rem;
+        }
+
+        .sau {
+            border: none;
+            width: 100%;
+        }
+        form{
+            border: blue solid;
+            width: 70%;
+           
+          
+        }
+        th{
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .form {
+            display: flex;
+            justify-content:center;
+
+            margin-top: 1rem;
+
+
+        }
+
+        .nam {
+            padding-left: 1rem;
+
+        }
+        input[type=checkbox]{
+           
+            margin-left: 18rem;
+        }
+        input[type=submit]
+       {
+            background-color:rgb(212, 211, 211);
+            color:black;
+            width: 130px;
+            height: 40px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-left: 18rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        
+            
+          
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"]{
+
+            width: 250px;
+        }
+        .mot{
+            text-align: center;
+            font-size: 35px;
+            color: brown;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+            text-shadow:1px 1px 2px grey;
+
+        }
+        .hai{
+            text-align: center;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            border-bottom: black solid;
+        
+        }
+        a{
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover{
+            color: red;
+
+        }
+        .ba{
+            margin-top: 1rem;
+           
+        }
+      
+        .p{
+            text-align: right;
+            height: 200px;
+        }
+        
+         
+    </style>
+</head>
+
+<body>
+    <div class="mot">
+        AP BookStore
+
+    </div>
+
+    <div >
+
+        <table class="hai">
+            <tr>
+                <td><a href="home.html">BOOKS</a></td>
+                <td><a href="#">BEST SELLERS</a></td>
+                <td><a href="#"> GENRES</a></td>
+                <td><a href="register.html">REGISTER</a></td>
+                <td><a href="#">SIGN IN</a></td>
+                <td><a href="#">YOUR ORDERS</a></td>
+                <td><a href="#">YOUR CART</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="form">
+        <form action="" onsubmit="return readData();">
+           
+            <table  class="sau" >
+                <tr>
+                    <th colspan="2">Create A New Account (It's Easy!)</th>
+                </tr>
+               
+                <tr>
+                    <td>
+                        <label for="">Your First Name</label>
+                    </td>
+                    <td>
+                        <input type="text" name="user" id="user" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for=""> Your Email</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="email" placeholder="xxxx@xxx.com" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Confirm  Your E-Mail</label></td>
+                    <td> <input type="email" name="email1" id="email1"  placeholder="xxxx@xxx.com" required>
+                    <br>Privacy Policy: We do not share your email address
+                </td>
+
+                </tr>
+                <tr>
+                    <td><label for="">Select A Password </label></td>
+                    <td> <input type="password" name="pass" id="pass" required>
+                    <br>Password must contain between five and 15 characters,<br>and cannot contain spaces or non-English characters.</td>
+
+                </tr>
+                <tr>
+                    <td><label for="">Re-Enter Password</label></td>
+                    <td> <input type="password" name="pass1" id="pass1" required></td>
+
+                </tr>
+                <tr>
+                   <td colspan="2" >
+                  
+                        <input  type="checkbox" name="bx" id="bx" value="Yes, Sign Me Up For Cash-Saving Coupons"
+                            checked>Yes, Sign Me Up For Cash-Saving Coupons
+                   </td>
+    
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input  type="submit" value="Create Account">
+                     
+                    </td>
+                </tr>
+            </table>
+           
+        </form>
+
+    </div>
+
+    <script>
+
+        function readData() {
+
+            var a = [];
+
+            a.push("Congratulation, Mr/Ms. Andrew !");
+            a.push(" ");
+            a.push("Your account has been created successfully.")
+
+            // lay du lieu email
+            var mail = document.getElementById("email").value;
+            var checkmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+(com)$/;
+            if (!checkmail.test(mail)) {
+                alert("You entered the wrong Mail format !");
+                return false;
+            }
+           
+
+             //lay password confirm
+             var checkemail = document.getElementById("email1").value;
+            if (mail != checkemail) {
+                alert("the email must be the same as the confirmed email!");
+                return false;
+            }
+
+            //lay password
+            var mk = document.getElementById("pass").value;
+            var aa = /^[A-Za-z0-9]{5,15}$/;
+            if (!aa.test(mk)) {
+                alert("Invalid password!");
+                return false;
+            }
+
+            //lay password confirm
+            var checkmk = document.getElementById("pass1").value;
+            if (mk != checkmk) {
+                alert("The password must be the same as the confirmed password!");
+                return false;
+            }
+
+            //doi du lieu thanh chuoi
+            alert(a.join("\n"));
+
+            return false; //vo hieu hoa chuc nang chuyen trang action cua nut submit
+
+        }
+
+    </script>
+
+</body>
+
+</html>
